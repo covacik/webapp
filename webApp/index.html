@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        .step {
+            display: none;
+        }
+        #vertical-nav {
+        position: fixed;
+        top: 50%;
+        left: 10px;
+        transform: translateY(-50%);
+        z-index: 1000;
+        }   
+        .nav-link.active {
+        font-weight: bold;
+        color: #007bff;
+        }
+        .tick-mark {
+            display: none;
+            margin-left: 5px;
+            color: green;
+        }
+
+        .nav-link.completed .tick-mark {
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-2">
+                <div id="vertical-nav" class="nav flex-column nav-pills" role="tablist" aria-orientation="vertical">
+                    <a class="nav-link active" id="v-pills-step1-tab" href="#step1" role="tab">Step 1 <span class="tick-mark">&#10003;</span></a>
+                    <a class="nav-link" id="v-pills-step2-tab" href="#step2" role="tab">Step 2 <span class="tick-mark">&#10003;</span></a>
+                    <a class="nav-link" id="v-pills-step3-tab" href="#step3" role="tab">Step 3 <span class="tick-mark">&#10003;</span></a>
+                </div>
+            </div>
+            <div class="col-10">
+                <div id="step1" class="step">
+                    <!-- Content for Step 1 -->
+                    <p>1-qwqwdsacdkfsmnelfknwelkfnwel
+                        <br>
+                        knfslksnfskdfnlskendflkewnsd
+                        <br>
+                        flksndfksndlfknsldkfnsklejfdnsldknf
+                        <br>
+                        qweqweqweqweqweqw
+                        <br>
+                        wqdwdwklsamkasd
+                        <br>
+                        qwqwdsacdkfsmnelfknwelkfnwel
+                        <br>
+                        knfslksnfskdfnlskendflkewnsd
+                        <br>
+                        flksndfksndlfknsldkfnsklejfdnsldknf
+                        <br>
+                        qweqweqweqweqweqw
+                        <br>
+                        wqdwdwklsamkasd
+                        <br>
+                        flksndfksndlfknsldkfnsklejfdnsldknf
+                        <br>
+                        qweqweqweqweqweqw
+                        <br>
+                        wqdwdwklsamkasd
+                        <br>
+                        qwqwdsacdkfsmnelfknwelkfnwel
+                        <br>
+                        knfslksnfskdfnlskendflkewnsd
+                        <br>
+                        flksndfksndlfknsldkfnsklejfdnsldknf
+                    </p>
+                    <button onclick="showStep(2)" class="btn btn-primary">Next</button>
+                    <hr class="my-4"> <!-- Divider part of Step 1 -->
+                </div>
+        
+                <div id="step2" class="step">
+                    <!-- Content for Step 2 -->
+                    <p>2-qwqwdsacdkfsmnelfknwelkfnwel
+                        <br>
+                        knfslksnfskdfnlskendflkewnsd
+                        <br>
+                        flksndfksndlfknsldkfnsklejfdnsldknf
+                        <br>
+                        qweqweqweqweqweqw
+                        <br>
+                        wqdwdwklsamkasd
+                        <br>
+                        qwqwdsacdkfsmnelfknwelkfnwel
+                        <br>
+                        knfslksnfskdfnlskendflkewnsd
+                        <br>
+                        flksndfksndlfknsldkfnsklejfdnsldknf
+                        <br>
+                        qweqweqweqweqweqw
+                        <br>
+                        wqdwdwklsamkasd
+                        <br>
+                        flksndfksndlfknsldkfnsklejfdnsldknf
+                        <br>
+                        qweqweqweqweqweqw
+                        <br>
+                        wqdwdwklsamkasd
+                        <br>
+                        qwqwdsacdkfsmnelfknwelkfnwel
+                        <br>
+                        knfslksnfskdfnlskendflkewnsd
+                        <br>
+                        flksndfksndlfknsldkfnsklejfdnsldknf
+                    </p>
+                    <button onclick="showStep(3)" class="btn btn-primary">Next</button>
+                    <hr class="my-4"> <!-- Divider part of Step 2 -->
+                </div>
+        
+                <div id="step3" class="step mb-3">
+                    <!-- Content for Step 3 -->
+                    <p>3-qwqwdsacdkfsmnelfknwelkfnwel
+                        <br>
+                        knfslksnfskdfnlskendflkewnsd
+                        <br>
+                        flksndfksndlfknsldkfnsklejfdnsldknf
+                        <br>
+                        qweqweqweqweqweqw
+                        <br>
+                        wqdwdwklsamkasd
+                        <br>
+                        qwqwdsacdkfsmnelfknwelkfnwel
+                        <br>
+                        knfslksnfskdfnlskendflkewnsd
+                        <br>
+                        flksndfksndlfknsldkfnsklejfdnsldknf
+                        <br>
+                        qweqweqweqweqweqw
+                        <br>
+                        wqdwdwklsamkasd
+                        <br>
+                        flksndfksndlfknsldkfnsklejfdnsldknf
+                        <br>
+                        qweqweqweqweqweqw
+                        <br>
+                        wqdwdwklsamkasd
+                        <br>
+                        qwqwdsacdkfsmnelfknwelkfnwel
+                        <br>
+                        knfslksnfskdfnlskendflkewnsd
+                        <br>
+                        flksndfksndlfknsldkfnsklejfdnsldknf
+                    </p>
+                    <button onclick="showStep(4)" class="btn btn-success">Finish</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Include Bootstrap JS -->
+    <script src="script.js"></script> <!-- Your custom JS file -->    
+</body>
+</html>
